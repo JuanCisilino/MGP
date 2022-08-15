@@ -13,4 +13,5 @@
     <string name="looser_message">You lose but you can..\n ¡TRY AGAIN!</string>
     <string name="retry">RETRY</string>
     <string name="finish">FINISH</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6484756253190029/6518656093</string>
 </resources>
