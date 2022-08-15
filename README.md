@@ -1,7 +1,7 @@
 # MGP
 Memory Game - Pokemon Version
 
-Este videojuego de memoria es pensado para ser usado como guia de aprendizaje para la adquisicion de conocimiento de:
+Este videojuego de memoria esta pensado como guia de aprendizaje para la adquisicion de conocimiento de:
 
 - Modelo de Trabajo.
 - Organizacion en un equipo.
