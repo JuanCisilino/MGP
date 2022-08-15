@@ -11,7 +11,6 @@
     tools:context=".MainActivity">
 
     <LinearLayout
-        android:id="@+id/title_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/xx_large_dimen"
@@ -45,7 +44,6 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/start_content"
         android:gravity="center_vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -57,12 +55,11 @@
             android:layout_gravity="center_horizontal"
             android:src="@drawable/ash"/>
 
-        <com.google.android.material.button.MaterialButton
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/play_button"
             android:layout_width="wrap_content"
             android:layout_height="62dp"
             android:layout_marginTop="@dimen/xx_large_dimen"
-            android:layout_centerInParent="true"
             android:backgroundTint="@color/green"
             android:text="@string/play"
             android:textSize="28sp"

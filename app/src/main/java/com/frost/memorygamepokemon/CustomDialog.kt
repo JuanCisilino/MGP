@@ -3,23 +3,23 @@ package com.frost.memorygamepokemon
 import android.content.Context
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.view.LayoutInflater
 import android.view.View
+import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.widget.LinearLayoutCompat
-import androidx.fragment.app.DialogFragment
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView
 import com.squareup.picasso.Picasso
 
-class CustomDialog(context: Context): DialogFragment() {
+class CustomDialog(context: Context, layoutInflater: LayoutInflater) {
 
-    private var dialogView: View
-    private lateinit var endGameLayout: LinearLayoutCompat
+    private lateinit var dialogView: View
+    private lateinit var endGameLayout: LinearLayout
     private lateinit var endGameImage: ShapeableImageView
     private lateinit var endGameMessage: MaterialTextView
     private lateinit var endGameButton: MaterialButton
-    private lateinit var difficultyLayout: LinearLayoutCompat
+    private lateinit var difficultyLayout: LinearLayout
     private lateinit var easyButton: MaterialButton
     private lateinit var mediumButton: MaterialButton
     private lateinit var hardButton: MaterialButton
@@ -28,12 +28,15 @@ class CustomDialog(context: Context): DialogFragment() {
     var onDifficultyButtonCallback : ((difficulty: String) -> Unit)? = null
 
     init {
-        val builder = AlertDialog.Builder(context)
-        dialogView = layoutInflater.inflate(R.layout.dialog, null)
-        builder.setView(dialogView)
-        alertDialog = builder.create()
-        initMembers()
+        create(context, layoutInflater)
+    }
 
+    private fun create(context: Context, layoutInflater: LayoutInflater) {
+        dialogView = layoutInflater.inflate(R.layout.dialog, null)
+        val builder = AlertDialog.Builder(context)
+        builder.setView(dialogView)
+        initMembers()
+        alertDialog = builder.create()
     }
 
     fun showDifficulty(){
@@ -41,37 +44,40 @@ class CustomDialog(context: Context): DialogFragment() {
         easyButton.setOnClickListener { onDifficultyButtonCallback?.invoke("easy") }
         mediumButton.setOnClickListener { onDifficultyButtonCallback?.invoke("medium") }
         hardButton.setOnClickListener { onDifficultyButtonCallback?.invoke("hard") }
-        show()
+        showDialog()
     }
 
-    fun showEndGame(gameLost: Boolean){
+    fun showEndGame(gameLost: Boolean, context: Context){
         difficultyLayout.visibility = View.GONE
         if(gameLost) {
             Picasso.get()
                 .load(R.drawable.loser)
                 .into(endGameImage)
-            endGameMessage.text = getString(R.string.looser_message)
-            endGameButton.text = getString(R.string.retry)
+            endGameMessage.text = context.getText(R.string.looser_message)
+            endGameButton.text = context.getText(R.string.retry)
         } else {
             Picasso.get()
                 .load(R.drawable.winner)
                 .into(endGameImage)
-            endGameMessage.text = getString(R.string.winner_message)
-            endGameButton.text = getString(R.string.finish)
+            endGameMessage.text = context.getText(R.string.winner_message)
+            endGameButton.text = context.getText(R.string.finish)
         }
         endGameButton.setOnClickListener {
             alertDialog.dismiss()
             onEndGameButtonCallback?.invoke()
         }
         alertDialog.setCancelable(false)
-        show()
+        showDialog()
     }
 
-    private fun show(){
+    private fun showDialog(){
         alertDialog.show()
         alertDialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 
+    fun dismiss(){
+        alertDialog.dismiss()
+    }
 
     private fun initMembers(){
         endGameLayout = dialogView.findViewById(R.id.end_game_layout)

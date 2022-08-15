@@ -3,6 +3,7 @@
     package="com.frost.memorygamepokemon">
 
     <application
+        android:name=".App"
         android:allowBackup="true"
         android:icon="@drawable/pokeball"
         android:label="@string/app_name"
