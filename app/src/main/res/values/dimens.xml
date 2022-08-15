@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="xx_large_dimen">64dp</dimen>
+    <dimen name="x_large_dimen">32dp</dimen>
+    <dimen name="large_dimen">16dp</dimen>
+    <dimen name="medium_dimen">8dp</dimen>
+    <dimen name="small_dimen">4dp</dimen>
+    <dimen name="x_small_dimen">2dp</dimen>
+    <dimen name="corner_radius">12dp</dimen>
+
+</resources>
