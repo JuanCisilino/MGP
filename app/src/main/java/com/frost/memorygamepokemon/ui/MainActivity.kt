@@ -1,8 +1,10 @@
-package com.frost.memorygamepokemon
+package com.frost.memorygamepokemon.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.frost.memorygamepokemon.helpers.CustomDialog
 import com.frost.memorygamepokemon.databinding.ActivityMainBinding
+import com.google.android.gms.ads.AdRequest
 
 class MainActivity : AppCompatActivity() {
 
@@ -15,6 +17,12 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.playButton.setOnClickListener { setDialog() }
+        setAds()
+    }
+
+    private fun setAds() {
+        val adRequest: AdRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
     private fun setDialog() {

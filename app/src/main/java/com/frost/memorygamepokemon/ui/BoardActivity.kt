@@ -1,4 +1,4 @@
-package com.frost.memorygamepokemon
+package com.frost.memorygamepokemon.ui
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.core.content.res.ResourcesCompat
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.frost.memorygamepokemon.App.Companion.EASY_COLUMNS
@@ -18,6 +17,10 @@ import com.frost.memorygamepokemon.App.Companion.HARD_TOTAL_BLOCKS
 import com.frost.memorygamepokemon.App.Companion.MEDIUM_COLUMNS
 import com.frost.memorygamepokemon.App.Companion.MEDIUM_DIFFICULT
 import com.frost.memorygamepokemon.App.Companion.MEDIUM_TOTAL_BLOCKS
+import com.frost.memorygamepokemon.helpers.BoardAdapter
+import com.frost.memorygamepokemon.helpers.CustomDialog
+import com.frost.memorygamepokemon.model.Pokemon
+import com.frost.memorygamepokemon.R
 import com.frost.memorygamepokemon.databinding.ActivityBoardBinding
 import com.squareup.picasso.Picasso
 import ir.samanjafari.easycountdowntimer.CountDownInterface
@@ -153,9 +156,9 @@ class BoardActivity : AppCompatActivity() {
                 } else if(cardSelected != pokemon) {
                     isValidating = true
                     showCardSelected(pokemon.backImage, isFirstBlock = false)
-                    Handler(Looper.getMainLooper()).postDelayed({validateCardsSelected(pokemon)}, 200)
+                    Handler(Looper.getMainLooper()).postDelayed({validateCardsSelected(pokemon)}, 600)
                 }
-            }, 100)
+            }, 200)
         }
     }
 

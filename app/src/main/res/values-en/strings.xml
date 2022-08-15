@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Memory Game</string>
+    <string name="version">Version</string>
+    <string name="play">Play</string>
+    <string name="choose_challenge">Choose your challenge!</string>
+    <string name="easy_difficult">Easy (4x4)</string>
+    <string name="medium_difficult">Medium (4x6)</string>
+    <string name="hard_difficult">Hard (5x6)</string>
+    <string name="movements">Movements:</string>
+    <string name="remaining_pairs">Remaining pairs:</string>
+    <string name="winner_message">YEEEAAHH ¡You made IT!!!</string>
+    <string name="looser_message">You lose but you can..\n ¡TRY AGAIN!</string>
+    <string name="retry">RETRY</string>
+    <string name="finish">FINISH</string>
+</resources>

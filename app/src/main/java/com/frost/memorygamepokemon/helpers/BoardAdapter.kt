@@ -1,4 +1,4 @@
-package com.frost.memorygamepokemon
+package com.frost.memorygamepokemon.helpers
 
 import android.animation.Animator
 import android.animation.AnimatorInflater
@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.frost.memorygamepokemon.R
+import com.frost.memorygamepokemon.model.Pokemon
 import com.google.android.material.card.MaterialCardView
 import com.google.android.material.imageview.ShapeableImageView
 import com.squareup.picasso.Picasso

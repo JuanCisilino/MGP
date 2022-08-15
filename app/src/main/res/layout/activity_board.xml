@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/blue"
     android:orientation="vertical"
-    tools:context=".BoardActivity">
+    tools:context=".ui.BoardActivity">
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/back_button"
@@ -44,9 +44,9 @@
                 app:showHours="false"
                 app:textSize="48sp"
                 app:digitBackground="@android:color/transparent"
-                app:textColor="@color/white"
+                app:textColor="@color/black"
                 app:setAnimation="true"
-                app:colonColor="@color/green"
+                app:colonColor="@color/white"
                 app:start_automatically="false"
                 />
 
@@ -60,7 +60,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:textSize="20sp"
-                    android:textColor="@color/green"
+                    android:textColor="@color/black"
                     android:text="@string/movements"/>
 
                 <com.google.android.material.textview.MaterialTextView
@@ -84,7 +84,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:textSize="20sp"
-                    android:textColor="@color/green"
+                    android:textColor="@color/black"
                     android:text="@string/remaining_pairs"/>
 
                 <com.google.android.material.textview.MaterialTextView

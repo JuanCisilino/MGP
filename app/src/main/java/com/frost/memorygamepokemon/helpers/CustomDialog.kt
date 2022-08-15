@@ -1,4 +1,4 @@
-package com.frost.memorygamepokemon
+package com.frost.memorygamepokemon.helpers
 
 import android.content.Context
 import android.graphics.Color
@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
 import androidx.appcompat.app.AlertDialog
+import com.frost.memorygamepokemon.App
+import com.frost.memorygamepokemon.R
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.imageview.ShapeableImageView
 import com.google.android.material.textview.MaterialTextView

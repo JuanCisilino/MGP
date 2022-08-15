@@ -1,4 +1,4 @@
-package com.frost.memorygamepokemon
+package com.frost.memorygamepokemon.model
 
 import androidx.annotation.DrawableRes
 
