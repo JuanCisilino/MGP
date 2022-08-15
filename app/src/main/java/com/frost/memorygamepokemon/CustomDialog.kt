@@ -25,7 +25,7 @@ class CustomDialog(context: Context, layoutInflater: LayoutInflater) {
     private lateinit var hardButton: MaterialButton
     private lateinit var alertDialog: AlertDialog
     var onEndGameButtonCallback : (() -> Unit)? = null
-    var onDifficultyButtonCallback : ((difficulty: String) -> Unit)? = null
+    var onDifficultyButtonCallback : ((difficulty: Int) -> Unit)? = null
 
     init {
         create(context, layoutInflater)
@@ -41,14 +41,16 @@ class CustomDialog(context: Context, layoutInflater: LayoutInflater) {
 
     fun showDifficulty(){
         endGameLayout.visibility = View.GONE
-        easyButton.setOnClickListener { onDifficultyButtonCallback?.invoke("easy") }
-        mediumButton.setOnClickListener { onDifficultyButtonCallback?.invoke("medium") }
-        hardButton.setOnClickListener { onDifficultyButtonCallback?.invoke("hard") }
+        difficultyLayout.visibility = View.VISIBLE
+        easyButton.setOnClickListener { onDifficultyButtonCallback?.invoke(App.EASY_DIFFICULT) }
+        mediumButton.setOnClickListener { onDifficultyButtonCallback?.invoke(App.MEDIUM_DIFFICULT) }
+        hardButton.setOnClickListener { onDifficultyButtonCallback?.invoke(App.HARD_DIFFICULT) }
         showDialog()
     }
 
     fun showEndGame(gameLost: Boolean, context: Context){
         difficultyLayout.visibility = View.GONE
+        endGameLayout.visibility = View.VISIBLE
         if(gameLost) {
             Picasso.get()
                 .load(R.drawable.loser)

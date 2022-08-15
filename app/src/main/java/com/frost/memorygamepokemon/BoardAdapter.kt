@@ -39,7 +39,7 @@ class BoardAdapter: RecyclerView.Adapter<BoardAdapter.CardHolder>() {
             Picasso.get()
                 .load(pokemon.backImage)
                 .into(backBlockImage)
-            if(pokemon.backImage == R.drawable.pokeball) {
+            if(pokemon.backImage == R.drawable.default_background) {
                 frontBlockImage.visibility = View.GONE
                 backBlockImage.visibility = View.VISIBLE
                 backBlockImage.isEnabled = false

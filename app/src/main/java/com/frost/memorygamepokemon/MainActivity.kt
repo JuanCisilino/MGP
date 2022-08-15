@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         customDialog.onDifficultyButtonCallback = { startGame(it) }
     }
 
-    private fun startGame(difficulty: String) {
+    private fun startGame(difficulty: Int) {
         customDialog.dismiss()
         BoardActivity.start(this, difficulty)
     }
