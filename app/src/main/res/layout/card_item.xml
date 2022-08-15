@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_item"
+    android:layout_width="60dp"
+    android:layout_height="60dp"
+    android:layout_margin="@dimen/medium_dimen"
+    android:clickable="true"
+    android:focusable="true"
+    android:elevation="8dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@color/blue"
+    app:cardCornerRadius="@dimen/corner_radius"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/front_card_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/pokeball"/>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/back_card_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+</com.google.android.material.card.MaterialCardView>

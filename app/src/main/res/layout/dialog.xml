@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/x_large_dimen"
+    android:backgroundTint="@color/white"
+    android:focusable="true"
+    android:clickable="true"
+    app:cardCornerRadius="@dimen/corner_radius"
+    app:cardElevation="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/end_game_layout"
+        android:layout_margin="@dimen/medium_dimen"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/end_game_image"
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/end_game_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_dimen"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textColor="@color/red"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/end_game_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_dimen"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/green"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/difficulty_layout"
+        android:layout_margin="@dimen/medium_dimen"
+        android:orientation="vertical">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/difficulty_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/medium_dimen"
+            android:layout_marginBottom="@dimen/large_dimen"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:textSize="32sp"
+            android:text="@string/choose_challenge"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/easy_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/green"
+            android:text="@string/easy_difficult"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/corner_radius"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/medium_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/primaryColor"
+            android:text="@string/medium_difficult"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/corner_radius"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/hard_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:backgroundTint="@color/red"
+            android:text="@string/hard_difficult"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            app:cornerRadius="@dimen/corner_radius"/>
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

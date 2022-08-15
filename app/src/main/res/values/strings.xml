@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Memory Game Pokemon</string>
+    <string name="app_name">Memory Game</string>
+    <string name="version">Version</string>
+    <string name="play">Empezar</string>
+    <string name="choose_challenge">Elige tu desafio!</string>
+    <string name="easy_difficult">Facil (4x4)</string>
+    <string name="medium_difficult">Medio (4x6)</string>
+    <string name="hard_difficult">Dificil (5x6)</string>
+    <string name="movements">Movimientos:</string>
+    <string name="remaining_pairs">Pares restantes:</string>
+    <string name="winner_message">Has ganadoo ¡Sos lo más!</string>
+    <string name="looser_message">Has perdido la partida pero puedes..\n ¡Intentar de nuevo!</string>
+    <string name="retry">REINTENTAR</string>
+    <string name="finish">FINALIZAR</string>
 </resources>
