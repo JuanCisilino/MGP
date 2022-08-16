@@ -4,7 +4,7 @@
     <string name="play">Empezar</string>
     <string name="choose_challenge">Elige tu desafio!</string>
     <string name="easy_difficult">Facil (4x4)</string>
-    <string name="medium_difficult">Medio (4x6)</string>
+    <string name="medium_difficult">Medio (4x5)</string>
     <string name="hard_difficult">Dificil (5x6)</string>
     <string name="movements">Movimientos:</string>
     <string name="remaining_pairs">Pares restantes:</string>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -16,20 +16,26 @@
         android:layout_margin="@dimen/large_dimen"
         android:backgroundTint="@color/green"
         android:src="@drawable/ic_arrow_back"
-        app:tint="@color/white"
         app:fabSize="mini"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/white"
         tools:ignore="ContentDescription" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/timerLayout"
         android:padding="@dimen/medium_dimen"
-        android:orientation="vertical">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:layout_marginTop="@dimen/large_dimen"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="2"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -38,17 +44,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
+                app:colonColor="@color/white"
+                app:digitBackground="@android:color/transparent"
                 app:hours="0"
                 app:minute="1"
                 app:second="0"
-                app:showHours="false"
-                app:textSize="48sp"
-                app:digitBackground="@android:color/transparent"
-                app:textColor="@color/black"
                 app:setAnimation="true"
-                app:colonColor="@color/white"
+                app:showHours="false"
                 app:start_automatically="false"
-                />
+                app:textColor="@color/black"
+                app:textSize="48sp" />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -59,18 +64,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="20sp"
+                    android:text="@string/movements"
                     android:textColor="@color/black"
-                    android:text="@string/movements"/>
+                    android:textSize="20sp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/movements"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/medium_dimen"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"/>
+                    android:layout_marginStart="@dimen/medium_dimen"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -83,18 +88,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="20sp"
+                    android:text="@string/remaining_pairs"
                     android:textColor="@color/black"
-                    android:text="@string/remaining_pairs"/>
+                    android:textSize="20sp" />
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/remaining_pairs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginStart="@dimen/medium_dimen"
                     android:layout_gravity="center_horizontal"
-                    android:textSize="20sp"
-                    android:textColor="@color/white"/>
+                    android:layout_marginStart="@dimen/medium_dimen"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
 
             </LinearLayout>
 
@@ -111,13 +116,13 @@
                 android:id="@+id/first_selection"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginEnd="@dimen/medium_dimen"/>
+                android:layout_marginEnd="@dimen/medium_dimen" />
 
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/second_selection"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="@dimen/medium_dimen"/>
+                android:layout_marginStart="@dimen/medium_dimen" />
 
         </LinearLayout>
 
@@ -125,8 +130,8 @@
             android:id="@+id/cards_recycler"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"/>
+            android:layout_gravity="center_horizontal" />
 
     </LinearLayout>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>
